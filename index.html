@@ -10,12 +10,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* BACKGROUND */
 body {
-    background: linear-gradient(to right, #eef2f3, #dfe9f3);
-    color: #333;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
 }
 
 /* NAVBAR */
@@ -24,95 +25,87 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 20px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(0,0,0,0.2);
     backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #333;
     font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #4a90e2;
+    color: #ffd369;
 }
 
 /* HERO */
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 header span {
-    color: #4a90e2;
+    color: #ffd369;
 }
 
 #typing {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    margin-top: 15px;
+    font-size: 1.3rem;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
     padding: 60px 20px;
     text-align: center;
 }
 
-section:nth-child(even) {
-    background: #f0f4f8;
-}
-
 h2 {
-    margin-bottom: 20px;
-    color: #4a90e2;
+    margin-bottom: 25px;
 }
 
 /* CARD */
 .card {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.1);
     margin: 20px auto;
     padding: 25px;
     width: 70%;
-    border-radius: 15px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-12px) scale(1.03);
 }
 
 /* SKILLS */
 .skills span {
     display: inline-block;
     margin: 10px;
-    padding: 10px 15px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 25px;
 }
 
 /* FOOTER */
 footer {
-    padding: 20px;
     text-align: center;
-    background: #4a90e2;
-    color: white;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
@@ -131,9 +124,8 @@ footer {
 <h2>About Me</h2>
 <div class="card">
 <p>
-I am a passionate and curious developer with a strong interest in Artificial Intelligence and Web Development. 
-I enjoy building real-time applications that solve practical problems and enhance user experience. 
-I am continuously learning new technologies and striving to create innovative and impactful solutions.
+I am a passionate developer interested in Artificial Intelligence and Web Development. 
+I enjoy building real-time applications and creating smart solutions that solve real-world problems.
 </p>
 </div>
 </section>
@@ -144,18 +136,14 @@ I am continuously learning new technologies and striving to create innovative an
 
 <div class="card">
 <h3>AI Fake Review Detection</h3>
-<p>
-An intelligent system designed to detect fake reviews using sentiment and emotion analysis.
-</p>
-<p style="color: gray;">🚧 In Progress</p>
+<p>Detects fake reviews using AI-based sentiment and emotion analysis.</p>
+<p style="color:#ffd369;">🚧 In Progress</p>
 </div>
 
 <div class="card">
 <h3>Cookify - Recipe Generator</h3>
-<p>
-A smart application that suggests recipes based on available ingredients or fridge images.
-</p>
-<p style="color: gray;">🚧 In Progress</p>
+<p>Suggests recipes based on fridge images or ingredients.</p>
+<p style="color:#ffd369;">🚧 In Progress</p>
 </div>
 
 </section>
@@ -172,23 +160,12 @@ A smart application that suggests recipes based on available ingredients or frid
 </div>
 </section>
 
-<!-- FUTURE GOALS -->
-<section>
-<h2>Future Goals</h2>
-<div class="card">
-<p>
-I aim to build impactful AI-based applications and continuously improve my skills in machine learning 
-and full-stack development. I am passionate about creating solutions that solve real-world problems.
-</p>
-</div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
-<p>Email: malavika7323@gmail.com</p>
-<p>GitHub: https://Malavika-2405.com/Malavika-2405</p>
+<p>Email: yourmail@gmail.com</p>
+<p>GitHub: https://github.com/yourusername</p>
 </div>
 </section>
 
@@ -197,9 +174,9 @@ and full-stack development. I am passionate about creating solutions that solve 
 <p>© 2026 Malavika | Portfolio</p>
 </footer>
 
-<!-- TYPING ANIMATION -->
+<!-- TYPING EFFECT -->
 <script>
-const text = "Aspiring AI Developer | Building Smart & Real-World Applications";
+const text = "Aspiring AI Developer | Building Smart Applications 🚀";
 let i = 0;
 
 function typeEffect() {
