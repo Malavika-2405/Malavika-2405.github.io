@@ -18,12 +18,13 @@ body {
     color: #333;
 }
 
+/* NAVBAR */
 nav {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 20px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -39,18 +40,33 @@ nav a:hover {
     color: #4a90e2;
 }
 
+/* HERO */
 header {
     text-align: center;
     padding: 80px 20px;
 }
 
-header h1 span {
+header h1 {
+    font-size: 2.5rem;
+}
+
+header span {
     color: #4a90e2;
 }
 
+#typing {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* SECTIONS */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+}
+
+section:nth-child(even) {
+    background: #f0f4f8;
 }
 
 h2 {
@@ -58,44 +74,33 @@ h2 {
     color: #4a90e2;
 }
 
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.85);
     margin: 20px auto;
     padding: 25px;
     width: 70%;
     border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 18px;
-    background: #4a90e2;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: #357abd;
-}
-
+/* SKILLS */
 .skills span {
     display: inline-block;
-    margin: 8px;
+    margin: 10px;
     padding: 10px 15px;
     background: white;
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+/* FOOTER */
 footer {
     padding: 20px;
     text-align: center;
@@ -107,6 +112,7 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
@@ -114,35 +120,47 @@ footer {
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <header>
 <h1>Hi, I'm <span>Malavika</span> 👋</h1>
-<p>AI Developer | Flask | Java</p>
+<p id="typing"></p>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
-<p>I am passionate about building AI-based applications and solving real-world problems.</p>
+<p>
+I am a passionate and curious developer with a strong interest in Artificial Intelligence and Web Development. 
+I enjoy building real-time applications that solve practical problems and enhance user experience. 
+I am continuously learning new technologies and striving to create innovative and impactful solutions.
+</p>
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="card">
 <h3>AI Fake Review Detection</h3>
-<p>Detects fake reviews using sentiment & emotion analysis.</p>
-<a href="#" class="btn">View Project</a>
+<p>
+An intelligent system designed to detect fake reviews using sentiment and emotion analysis.
+</p>
+<p style="color: gray;">🚧 In Progress</p>
 </div>
 
 <div class="card">
 <h3>Cookify - Recipe Generator</h3>
-<p>Generates recipes from fridge images or ingredients.</p>
-<a href="#" class="btn">View Project</a>
+<p>
+A smart application that suggests recipes based on available ingredients or fridge images.
+</p>
+<p style="color: gray;">🚧 In Progress</p>
 </div>
 
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills">
@@ -154,6 +172,18 @@ footer {
 </div>
 </section>
 
+<!-- FUTURE GOALS -->
+<section>
+<h2>Future Goals</h2>
+<div class="card">
+<p>
+I aim to build impactful AI-based applications and continuously improve my skills in machine learning 
+and full-stack development. I am passionate about creating solutions that solve real-world problems.
+</p>
+</div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
@@ -162,9 +192,26 @@ footer {
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <p>© 2026 Malavika | Portfolio</p>
 </footer>
+
+<!-- TYPING ANIMATION -->
+<script>
+const text = "Aspiring AI Developer | Building Smart & Real-World Applications";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+window.onload = typeEffect;
+</script>
 
 </body>
 </html>
