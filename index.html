@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malavika Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #4a90e2;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 span {
+    color: #4a90e2;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.card {
+    background: rgba(255,255,255,0.7);
+    margin: 20px auto;
+    padding: 25px;
+    width: 70%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #357abd;
+}
+
+.skills span {
+    display: inline-block;
+    margin: 8px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #4a90e2;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Hi, I'm <span>Malavika</span> 👋</h1>
+<p>AI Developer | Flask | Java</p>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>I am passionate about building AI-based applications and solving real-world problems.</p>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>AI Fake Review Detection</h3>
+<p>Detects fake reviews using sentiment & emotion analysis.</p>
+<a href="#" class="btn">View Project</a>
+</div>
+
+<div class="card">
+<h3>Cookify - Recipe Generator</h3>
+<p>Generates recipes from fridge images or ingredients.</p>
+<a href="#" class="btn">View Project</a>
+</div>
+
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<span>Java</span>
+<span>Python</span>
+<span>Flask</span>
+<span>HTML</span>
+<span>CSS</span>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: yourmail@gmail.com</p>
+<p>GitHub: https://github.com/yourusername</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Malavika | Portfolio</p>
+</footer>
+
+</body>
+</html>
